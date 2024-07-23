@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ffcc00, #ff6699);
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0 0 20px;
+}
+
+.message {
+    font-size: 1.2em;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+#confetti {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.confetti {
+    fill: #ffffff;
+}
+
+.confetti-1 { animation: fall 2s linear infinite; }
+.confetti-2 { animation: fall 2.5s linear infinite; }
+.confetti-3 { animation: fall 3s linear infinite; }
+.confetti-4 { animation: fall 2.2s linear infinite; }
+.confetti-5 { animation: fall 2.8s linear infinite; }
+
+@keyframes fall {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(200px) rotate(360deg); }
+}
+
+#cake-button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff6699;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+#cake-button:hover {
+    background-color: #ff3366;
+}
+
+#cake-container {
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#cake-container.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#cake-svg {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.cake-layer {
+    stroke: #cc6699;
+    stroke-width: 2;
+}
+
+.cake-layer-1 {
+    fill: #f8c471;
+}
+
+.cake-layer-2 {
+    fill: #f39c12;
+}
+
+.cake-layer-3 {
+    fill: #e67e22;
+}
+
+.cake-deco {
+    fill: #e74c3c;
+    stroke: #c0392b;
+    stroke-width: 2;
+}
+
+.cake-candle {
+    stroke: #ffffff;
+    stroke-width: 2;
+}
+
+.cake-flame {
+    fill: #f1c40f;
+    animation: flicker 0.5s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .message {
+        font-size: 1em;
+    }
+}
